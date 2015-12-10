@@ -28,10 +28,11 @@ http-server
 ## JavaScript concepts
 1. Explain what hoisting is. Provide your answer below.
 
-  **Student answer: **
+  Hoisting is a particular programming languange's practice of moving variable and function declarations to the beginning of the particular scope they are declared in.
+
 1. What is a callback? Why do we use them in JavaScript? Provide your answer, and code a simple example below.
 
-  **Student answer: **
+  A callback is a reference to a pre-defined function that is passed, as an argument, to a target function to be executed within the scope of that target function.
 
 ## Functions and operators
 
@@ -51,7 +52,7 @@ http-server
 ## IIFE
 
 1. I included two other script files in the HTML, `IIFE.js` and `AugmentedIIFE.js` that you will use for these tasks.
-1. In the file named `IIFE.js`. Write an IIFE that defines a global variable named **FruitMaker**. It should contain a private array holding the following strings: "apples", "bananas", "cherries", "huckleberries". 
+1. In the file named `IIFE.js`. Write an IIFE that defines a global variable named **FruitMaker**. It should contain a private array holding the following strings: "apples", "bananas", "cherries", "huckleberries".
 1. In the file named `AugmentedIIFE.js`, augment **FruitMaker** with a function named `slices()` that accepts two arguments: the name of the fruit, and the number of slices to make. It should return an array containing the name of the fruit duplicated how ever many slices was requested.
 
   For example: `slices("apples", 2)` should return `["apples", "apples"]`
