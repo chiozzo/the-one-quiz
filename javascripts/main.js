@@ -14,28 +14,24 @@ a = 10;
 b = 3;
 
 var modulus = function(a, b) {
-	console.log("a % b",a % b);
 	return a % b;
 };
-modulus(a, b);
 
 var doMath = function(a, b, callback) {
-	callback(a, b);
+	return callback(a, b);
 };
 
 var add = function(a, b) {
-	console.log("a + b",a + b);
 	return a + b;
 };
 
 var subtract = function(a, b) {
-	console.log("a - b",a - b);
 	return a - b;
 };
 
-doMath(a, b, add);
-
-doMath(a, b, subtract);
+console.log("modulus(a, b)", modulus(a, b));
+console.log("doMath(a, b, add)", doMath(a, b, add));
+console.log("doMath(a, b, subtract)", doMath(a, b, subtract));
 
 
 
@@ -43,3 +39,26 @@ doMath(a, b, subtract);
  * Arrays
  */
 var Planets = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"];
+
+var sortedPlanets = function(planets) {
+	return planets.sort();
+};
+
+var reversedPlanets = function(planets) {
+	return planets.map(function(currentValue, index, array){
+		return currentValue.split('').reverse().join('');
+	});
+};
+
+var longPlanets = function(planets) {
+	var longPlanets = planets.filter(function(currentValue, index, array) {
+		if (currentValue.length >= 7) {
+			return currentValue;
+		}
+	});
+	return longPlanets;
+};
+
+console.log("sortedPlanets(Planets)", sortedPlanets(Planets));
+console.log("reversedPlanets(Planets)", reversedPlanets(Planets));
+console.log("longPlanets(Planets)", longPlanets(Planets));
