@@ -62,3 +62,17 @@ var longPlanets = function(planets) {
 console.log("sortedPlanets(Planets)", sortedPlanets(Planets));
 console.log("reversedPlanets(Planets)", reversedPlanets(Planets));
 console.log("longPlanets(Planets)", longPlanets(Planets));
+
+
+
+/**
+ * XHR
+ */
+var getAnimals = function() {
+	$.ajax({
+		url:'data/animals.json'
+	}).done(function(JSONObj){
+		console.log("animals", JSONObj.animals);
+	});
+};
+getAnimals();

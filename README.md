@@ -28,11 +28,11 @@ http-server
 ## JavaScript concepts
 1. Explain what hoisting is. Provide your answer below.
 
-  Hoisting is a particular programming languange's practice of moving variable and function declarations to the beginning of the particular scope they are declared in.
+  **_Hoisting is a particular programming languange's practice of moving variable and function declarations to the beginning of the particular scope they are declared in._**
 
 1. What is a callback? Why do we use them in JavaScript? Provide your answer, and code a simple example below.
 
-  A callback is a reference to a pre-defined function that is passed, as an argument, to a target function to be executed within the scope of that target function.
+  **_A callback is a reference to a pre-defined function that is passed, as an argument, to a target function to be executed within the scope of that target function._**
 
 ## Functions and operators
 
@@ -61,13 +61,29 @@ http-server
 
 1. Write a function named `getAnimals` that uses the jQuery `ajax` method to retrieve the `data/animals.json` file. When you execute the functions, it should just log *just the array* of animals to the console when the async is complete. Make sure you provide a prompt of "animals" when logging the array.
 1. What are the four HTTP verbs that you can use in an XHR that correspond to the CRUD actions (create, read, update, delete)?
-  **Student answer:**
+  - Create: PUT
+  - Read: GET
+  - Update: POST
+  - Delete: DELETE
 
 1. Why did we use Promises when dealing with asynchronous XHR calls?
-  **Student answer:**
+
+  **_We use Promises to deal with asynchronous XHR calls because passing callback functions to an XHR call in order to return the data can become overly complicated. Also, Promises give you built in error handling which is very convenient._**
+
+  ![Callback Hell](http://i.imgur.com/DEg3cPZ.png)
 
 1. Provide a simple example of the syntax for handling a Promise.
-  **Student answer:**
+  ```js
+  //To return a promise
+  var deferred = q.defer();
+  //Action that will eventually return something due to asynchronousity
+  deferred.resolve(data);
+  //This promise being returned next is initially empty, but is resolved (fulfilled) once the asynchronous action is complete.
+  return deferred.promise;
+
+  //To act on a promise
+  functionToGetThing().then(function(thingReturnedFromPromise) {});
+  ```
 
 ## Scope and this
 
