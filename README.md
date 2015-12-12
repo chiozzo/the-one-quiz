@@ -89,7 +89,7 @@ http-server
 
 What gets logged to the console when the following code executes? Explain why.
 
-**Student answer: **
+**_42 will get logged to the console upon the execution of `steve()` because the callsite is in the same scope as `answer` defined as 42. Since the log of `answer` is executed following `this`, `this` will refer to the scope of the callsite._**
 
 ```
 var answer = "42";
